@@ -3,4 +3,4 @@ import Foundation
 import Yesod.Core
 
 main :: IO ()
-main = warp 3000 App
+main = warp 8080 App

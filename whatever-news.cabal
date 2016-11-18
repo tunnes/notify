@@ -10,7 +10,7 @@ executable          whatever-news
                     Foundation
 
                     Add
-                    Home
+                    Handler.Principal
 
   ghc-options:      -Wall -fwarn-tabs -O2
 

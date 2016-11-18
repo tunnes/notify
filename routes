@@ -1,2 +1,2 @@
-/              HomeR GET
-/add/#Int/#Int AddR  GET
+/               PrincipalR   GET
+/add/#Int/#Int  AddR         GET
