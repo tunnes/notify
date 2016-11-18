@@ -9,14 +9,25 @@ executable          whatever-news
   other-modules:    Application
                     Foundation
 
-                    Add
                     Handler.Principal
+                    Handler.Categoria
+                    Handler.Comentario
+                    Handler.Jornalista
+                    Handler.Noticia
 
   ghc-options:      -Wall -fwarn-tabs -O2
 
   build-depends:  base
                 , yesod
                 , yesod-core
+                , yesod-static
+                , text                          
+                , persistent                    
+                , persistent-postgresql
+                , monad-logger
+                , bytestring
+                , filepath
                 , shakespeare
+                , time
 
   ghc-options:    -threaded -O2 -rtsopts -with-rtsopts=-N
