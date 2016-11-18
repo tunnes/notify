@@ -10,6 +10,10 @@ executable          whatever-news
                     Foundation
 
                     Handler.Principal
+                    Handler.Categoria
+                    Handler.Comentario
+                    Handler.Jornalista
+                    Handler.Noticia
 
   ghc-options:      -Wall -fwarn-tabs -O2
 
@@ -24,5 +28,6 @@ executable          whatever-news
                 , bytestring
                 , filepath
                 , shakespeare
+                , time
 
   ghc-options:    -threaded -O2 -rtsopts -with-rtsopts=-N

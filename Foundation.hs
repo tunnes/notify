@@ -9,6 +9,10 @@ import Yesod
 import Yesod.Static
 import Text.Lucius
 import Data.Text
+import Data.ByteString as BS
+import Data.ByteString.Lazy as LBS
+import System.FilePath
+import Data.Time (UTCTime, getCurrentTime, showGregorian, utctDay, Day)
 import Database.Persist.Postgresql
     ( ConnectionPool, SqlBackend, runSqlPool)
     
@@ -17,9 +21,49 @@ import Database.Persist.Postgresql
 data App = App {connPool :: ConnectionPool } -- Adicionar futuramente o type parameter {getStatic :: Static}
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
+Login
+    nome  Text
+    senha Text
+    UniqueLogin nome
+    deriving Show
 
-Inicio
-    conf Text
+Jornalista
+    loginId     LoginId
+    nome        Text
+    email       Text
+    nascimento  Day
+    UniqueJornalista email
+    deriving Show
+
+Publicacao
+    jornalistaId JornalistaId
+    noticiaId NoticiaId
+    deriving Show
+
+Noticia
+    nome Text
+    descricao Text
+    data UTCTime default=now()
+    categoriaId CategoriaId
+    imagem1Id ImagemId Maybe
+    imagem2Id ImagemId Maybe
+    imagem3Id ImagemId Maybe
+    deriving Show
+    
+Categoria
+    nome Text
+    ativo Bool
+    UniqueNome nome
+    deriving Show
+
+Imagem
+    conteudo BS.ByteString
+    deriving Show
+
+Comentario
+    descricacao Text
+    email Text
+    noticiaId NoticiaId
     deriving Show
 |]
 

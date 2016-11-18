@@ -1,1 +1,12 @@
-/               PrincipalR   GET
+/                                           PrincipalR         GET
+/noticia/cadastro                           NoticiaR           GET POST
+/noticia/att/#NoticiaId                     AttNoticiaR        POST
+/noticia/del/#NoticiaId                     DelNoticiaR        POST
+/noticia/comentario                         ComentarioR        POST
+/categoria/cadastro                         CategoriaR         GET POST
+/categoria/del/#CategoriaId                 DelCategoriaR      POST
+/categoria/att/#CategoriaId                 AttCategoriaR      POST
+/cadastro                                   CadastroR          GET POST
+/login                                      LoginR             GET POST
+/perfil                                     PerfilR            GET
+/logout                                     LogoutR            POST

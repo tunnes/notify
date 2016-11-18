@@ -9,7 +9,11 @@ module Application where
 import Foundation
 import Yesod.Core
 
--- Importando o 'Handler da pagina principal:'
+-- Importando os handlers
 import Handler.Principal
+import Handler.Categoria
+import Handler.Comentario
+import Handler.Jornalista
+import Handler.Noticia
 
 mkYesodDispatch "App" resourcesApp
