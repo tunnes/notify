@@ -1,0 +1,48 @@
+/* EXTERNO --------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+
+
+body{
+    position: relative;
+}
+.affix{
+    top:0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+.navbar{
+    margin-bottom: 0px;
+}
+.affix ~ .container-fluid{
+    position: relative;
+    top: 50px;
+}
+  
+#section1{
+    padding-top:50px;
+    height:500px;
+    color: #fff; 
+    background-color: #1E88E5;
+}
+
+#section2{
+    padding-top:50px;
+    height:500px;
+    color: #fff; 
+    background-color: #673ab7;
+}
+
+#section3{
+    padding-top:50px;
+    height:500px;
+    color: #fff; 
+    background-color: #ff9800;
+}
+/* HEADER ---------------------------------------------------------------------- */
+.header_section{
+    margin-top: 30px;
+    font-size: 100px;
+    height: 400px;
+    text-transform: uppercase;
+    font-family: 'Alfa Slab One', cursive;
+}

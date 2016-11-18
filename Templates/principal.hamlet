@@ -1,1 +1,38 @@
-    <h1>Página principal =]
+<div class="container header_section">
+    <div class="col-md-2 logo_imagem">
+        <img class="img-responsive" src="http://66.media.tumblr.com/b560f99586e1693a8b3410a7cdd5bd1d/tumblr_inline_nhjrgyTmyQ1rp2qoz.png">
+    
+    <div class="col-md-10 logo_texto">
+        <h1>Whatever Diario
+
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="397">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar">
+                <span class="icon-bar">
+                <span class="icon-bar">
+            <a class="navbar-brand" href="#">WebSiteName
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#section1">Section 1
+                <li>
+                    <a href="#section2">Section 2
+                <li>
+                    <a href="#section3">Section 3
+                    
+<div id="section1" class="container-fluid">
+    <h1>Section 1
+    <p>Try to scroll this section and look at the navigation bar while scrolling!
+    <p>Try to scroll this section and look at the navigation bar while scrolling!
+
+<div id="section2" class="container-fluid">
+    <h1>Section 2
+    <p>Try to scroll this section and look at the navigation bar while scrolling!
+    <p>Try to scroll this section and look at the navigation bar while scrolling!
+
+<div id="section3" class="container-fluid">
+    <h1>Section 3
+    <p>Try to scroll this section and look at the navigation bar while scrolling!
+    <p>Try to scroll this section and look at the navigation bar while scrolling!    

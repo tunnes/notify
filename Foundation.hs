@@ -7,6 +7,7 @@
 module Foundation where
 
 import Yesod
+import Text.Lucius
 
 data App = App
 
@@ -16,7 +17,8 @@ instance Yesod App where
 -- Inserindo componentes para funcionamento do Boostrap:
 -- "Sobrescrevendo" a função defaultLayout. widgetToPageContent retorna uma estrutura separada em 'head' e 'body'.
 
-    defaultLayout widget = widgetToPageContent widget >>= \pageContent -> 
+    defaultLayout widget = widgetToPageContent (toWidget $(luciusFile "Static/lucius/main.lucius") >> widget) >>= \pageContent ->
+    -- defaultLayout widget = widgetToPageContent widget >>= \pageContent -> 
         withUrlRenderer [hamlet|
             <!doctype html>
                 <html lang="PT-BR">
