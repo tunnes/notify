@@ -1,15 +1,27 @@
-{-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE TemplateHaskell   #-}
-{-# LANGUAGE TypeFamilies      #-}
-{-# LANGUAGE ViewPatterns      #-}
-{-# LANGUAGE QuasiQuotes       #-} -- Importante quando se usa QuasiQuoters
+{-# LANGUAGE OverloadedStrings, TypeFamilies, QuasiQuotes,
+             TemplateHaskell, GADTs, FlexibleContexts,
+             MultiParamTypeClasses, DeriveDataTypeable, EmptyDataDecls,
+             GeneralizedNewtypeDeriving, ViewPatterns, FlexibleInstances #-} -- Importante quando se usa QuasiQuoters
 
 module Foundation where
 
 import Yesod
+import Yesod.Static
 import Text.Lucius
+import Data.Text
+import Database.Persist.Postgresql
+    ( ConnectionPool, SqlBackend, runSqlPool)
+    
+-- staticFiles "static" Indicar futuramente o  nome da pasta dos arquivos
 
-data App = App
+data App = App {connPool :: ConnectionPool } -- Adicionar futuramente o type parameter {getStatic :: Static}
+
+share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
+
+Inicio
+    conf Text
+    deriving Show
+|]
 
 mkYesodData "App" $(parseRoutesFile "routes")
 
@@ -31,5 +43,15 @@ instance Yesod App where
                         ^{pageHead pageContent}
                     ^{pageBody pageContent}
         |]
+
+instance YesodPersist App where
+    type YesodPersistBackend App = SqlBackend
+    runDB f = do
+        master <- getYesod
+        let pool = connPool master
+        runSqlPool f pool
+
+instance RenderMessage App FormMessage where
+    renderMessage _ _ = defaultFormMessage
         
     

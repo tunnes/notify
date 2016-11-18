@@ -9,8 +9,6 @@ module Application where
 import Foundation
 import Yesod.Core
 
-import Add
-
 -- Importando o 'Handler da pagina principal:'
 import Handler.Principal
 
