@@ -1,9 +1,11 @@
 /                                                      PrincipalR         GET
-/noticia/cadastro                                      NoticiaR           GET POST
+/noticia                                               NoticiaR           GET POST
+/noticia/mostrar/#NoticiaId                            AbrirNoticiaR      GET
 /noticia/att/#NoticiaId                                AttNoticiaR        POST
 /noticia/del/#NoticiaId                                DelNoticiaR        POST
-/comentario/#NoticiaId                                 ComentarioR        POST
-/categoria/cadastro                                    CategoriaR         GET POST
+/noticia/listar                                        LisNoticiaR        GET
+/noticia/comentario/#NoticiaId                         ComentarioR        POST
+/categoria                                             CategoriaR         GET POST
 /categoria/del/#CategoriaId                            DelCategoriaR      POST
 /categoria/att/#CategoriaId                            AttCategoriaR      POST
 /cadastro                                              CadastroR          GET POST
