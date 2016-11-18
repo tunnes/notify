@@ -1,0 +1,60 @@
+[33mcommit 35e6f915dfc938f16661825b9789098dfed9397b[m
+Author: gmoraiz <g.moraissilva@outlook.com>
+Date:   Fri Nov 18 16:41:25 2016 +0000
+
+    Implementação das tabelas, rotas e handlers
+
+[33mcommit 063ac1f4ba02ca0ea8cc707963acecfa9a7443f9[m
+Author: gmoraiz <g.moraissilva@outlook.com>
+Date:   Fri Nov 18 14:57:30 2016 +0000
+
+    Configurações do cabal e estruturalização do Main e Fundation para a Base de Dados.
+
+[33mcommit 112568900a69e327ed068591ea8f5e9df5554283[m
+Author: Ayrton Felipe <ayrton.tunes@outlook.com>
+Date:   Fri Nov 18 13:49:11 2016 +0000
+
+    Implementando estrutura responsiva OnePage.
+
+[33mcommit 9f5fd199ec9117a11192505ba2035d2c6f6b0e25[m
+Merge: 3101141 63b2cc5
+Author: Ayrton Felipe <ayrton.tunes@outlook.com>
+Date:   Fri Nov 18 11:35:40 2016 +0000
+
+    Merge branch 'master' of https://github.com/tunnes/whatever-news
+
+[33mcommit 310114138d06ba835ad52017ed1bc0c8031b9f99[m
+Author: Ayrton Felipe <ayrton.tunes@outlook.com>
+Date:   Fri Nov 18 11:35:00 2016 +0000
+
+    Configuração do Boostrap no Yesod.
+
+[33mcommit 2a2e1419151e3ee2c1f5b161a88754b169fc6c64[m
+Author: Ayrton Felipe <ayrton.tunes@outlook.com>
+Date:   Fri Nov 18 02:44:46 2016 +0000
+
+    Configuração inicial de handlers.
+
+[33mcommit 63b2cc59640a4f6a29193e996cf3307c2de730a3[m
+Author: Ayrton Felipe <ayrton.tunes@outlook.com>
+Date:   Thu Nov 17 19:16:23 2016 -0200
+
+    Update README.md
+
+[33mcommit 845f717f3986bd0a47d896b31329df0665ab2f1b[m
+Author: Ayrton Felipe <ayrton.tunes@outlook.com>
+Date:   Thu Nov 17 21:15:24 2016 +0000
+
+    Criado o arquivo externo MER.
+
+[33mcommit 93b983002c7d03869b0e956c0678f37931982aeb[m
+Author: Ayrton Felipe <ayrton.tunes@outlook.com>
+Date:   Thu Nov 17 19:31:28 2016 +0000
+
+    Estrutura inicial do sistema.
+
+[33mcommit 753df466ec9303afff09b4784a47fcbbad707118[m
+Author: Ayrton Felipe <ayrton.tunes@outlook.com>
+Date:   Thu Nov 17 17:00:09 2016 -0200
+
+    Initial commit
