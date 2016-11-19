@@ -12,3 +12,4 @@
 /login                                                 LoginR             GET POST
 /perfil                                                PerfilR            GET
 /logout                                                LogoutR            POST
+/static                                                StaticR Static getStatic

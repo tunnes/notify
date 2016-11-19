@@ -16,9 +16,9 @@ import Data.Time (UTCTime, getCurrentTime, showGregorian, utctDay, Day)
 import Database.Persist.Postgresql
     ( ConnectionPool, SqlBackend, runSqlPool)
     
--- staticFiles "static" Indicar futuramente o  nome da pasta dos arquivos
+staticFiles "Static" --Indicar futuramente o  nome da pasta dos arquivos
 
-data App = App {connPool :: ConnectionPool } -- Adicionar futuramente o type parameter {getStatic :: Static}
+data App = App {getStatic :: Static, connPool :: ConnectionPool } -- Adicionar futuramente o type parameter {getStatic :: Static}
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
 Login
