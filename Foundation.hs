@@ -57,7 +57,7 @@ Categoria
     deriving Show
 
 Imagem
-    conteudo BS.ByteString
+    conteudo Text
     deriving Show
 
 Comentario

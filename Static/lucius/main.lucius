@@ -1,6 +1,8 @@
 /* EXTERNO --------------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 
+/*font-family: 'Oswald', sans-serif;*/
+/*font-family: 'Roboto', sans-serif;*/
 
 body{
     position: relative;
@@ -19,10 +21,7 @@ body{
 }
   
 #section1{
-    padding-top:50px;
-    height:500px;
-    color: #fff; 
-    background-color: #1E88E5;
+   
 }
 
 #section2{
@@ -40,9 +39,89 @@ body{
 }
 /* HEADER ---------------------------------------------------------------------- */
 .header_section{
+    padding-left: 0px;
+    padding-right: 0px;    
     margin-top: 30px;
-    font-size: 100px;
-    height: 400px;
+    height: 250px;
+}
+.header_section hr{
+    border-bottom: 1px solid black;
+    width: 100%;
+    border-style: double;
+    border-width: 3px;
+    margin: 20px 0px 20px 0px;
+}
+.header_section p{
+    font-family: 'Oswald', sans-serif;
+    text-align: right;
     text-transform: uppercase;
-    font-family: 'Alfa Slab One', cursive;
+    font-size: 14px;
+    margin-right: 11px;
+    font-weight: 100;
+}
+
+.header_section h1{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    /* font-family: 'Roboto', sans-serif; */
+    font-weight: 800;
+    text-align: right;
+    font-size: 120px;
+    margin: 0px;
+    padding: 0px;
+}
+/* NAV-BAR --------------------------------------------------------------------- */
+.navbar-inverse{
+    color: black;
+    background-color: white; 
+    border: none;
+}
+.navbar-inverse .navbar-nav>li>a {
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    /* font-family: 'Roboto', sans-serif; */
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 13px;
+}
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    color: red;
+}
+
+/* SECTION 00 ------------------------------------------------------------------ */
+#section_00{
+    margin-top: 10px;
+    border: 1px solid black;
+    border-bottom: none;
+    padding-top:50px;
+}
+#section_00 h1{
+    width: 100%;
+    display: block;
+    font-size: 120px;
+    font-weight: 900;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    text-transform: uppercase;
+}
+#section_00 img{
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+#section_00 p::first-letter {
+    font-size: 40px;
+    margin: 0px;
+    padding: 0px;
+    color: red;
+    text-transform: uppercase;
+}
+#section_00 p{
+  width: 100%;
+  height: 350px;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
