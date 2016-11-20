@@ -76,9 +76,12 @@ body{
     margin: 0px;
     padding: 0px;
 }
+
+
+
 /* HEADER TICKETS ---------------------------------------------------------------------------------------------------- */
 .header_tickets{
-    height: 90px;
+    /*height: 90px;*/
 }
 .todos{
     white-space: normal;
@@ -245,9 +248,14 @@ body{
 }
 /* AJUSTANDO UNS BANGS*/
 @media screen and (max-width: 1200px) {
-    /*.header_section{*/
-    /*    height: 350px;*/
-    /*}*/
+  .logo_imagem{
+      display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header_section h1{
+     font-size: 80px; 
+  }
 }
 
 .noticia{
@@ -263,10 +271,6 @@ body{
 }
 #noticia_secundaria p{
     text-align: justify;
-}
-.row {
-    margin-right: -15px;
-    margin-left:  0px; 
 }
 /* COISAS GENERICAS */
 .noticia_generica{

@@ -45,9 +45,10 @@ Noticia
     descricao Text
     data UTCTime default=now()
     categoriaId CategoriaId
-    imagem1Id ImagemId Maybe
-    imagem2Id ImagemId Maybe
-    imagem3Id ImagemId Maybe
+    imagem_id ImagemId Maybe
+    -- imagem1Id ImagemId Maybe
+    -- imagem2Id ImagemId Maybe
+    -- imagem3Id ImagemId Maybe
     deriving Show
     
 Categoria

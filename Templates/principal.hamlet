@@ -1,21 +1,21 @@
 <div id="headerID" class="container header_section">
     <hr>
         
-    <div class="col-xs-2 col-sm-5 col-md-2 col-lg-2 logo_imagem">
+    <div class="col-md-2 col-lg-2 logo_imagem">
         <img class="img-responsive" src="http://66.media.tumblr.com/b560f99586e1693a8b3410a7cdd5bd1d/tumblr_inline_nhjrgyTmyQ1rp2qoz.png">
     
-    <div class="col-xs-10 col-sm-7 col-md-10 col-lg-10 logo_texto">
+    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 logo_texto">
         <h1>Whatever Diario
         <p> O jornal mais pica do youtube, pode apostar Dog
     
     <hr>
     <div class="row header_tickets">
-        <div class="col-md-3">
+        <div class="col-sm-3 col-md-3 col-lg-3">
             <div id="tecket_00" class="todos">
                 <span class="valor">100,00
                 <span class="label">valor
                 
-        <div class="col-md-3">
+        <div class="col-sm-4 col-sm-3 col-md-3 col-lg-3">
             <div id="tecket_01" class="todos">
                 <h2 class="titulo">
                     Lorem ipsum
@@ -25,7 +25,7 @@
                     magna aliquam erat volutpat. tincidunt ut laoreet dolore
                     magna aliquam erat volutpat.                
                 
-        <div class="col-md-2">
+        <div class="col-sm-4 col-sm-2 col-md-2 col-lg-2">
             <div id="tecket_02" class="todos">
                 <h2 class="titulo">
                     Lorem ipsum
@@ -35,7 +35,7 @@
                     magna aliquam erat volutpat. tincidunt ut laoreet dolore
                     magna aliquam erat volutpat.
         
-        <div class="col-md-2">
+        <div class="col-sm-4 col-sm-2 col-md-2 col-lg-2">
             <div id="tecket_04" class="todos">
                 <h2 class="titulo">
                     Lorem ipsum
@@ -45,7 +45,7 @@
                     magna aliquam erat volutpat. tincidunt ut laoreet dolore
                     magna aliquam erat volutpat.                    
                 
-        <div class="col-md-2">
+        <div class="col-sm-4 col-sm-2 col-md-2 col-lg-2">
             <div id="tecket_03" class="todos">
                 <img class="img-responsive" src="http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg">                                          
 
