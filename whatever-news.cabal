@@ -30,5 +30,6 @@ executable          whatever-news
                 , filepath
                 , shakespeare
                 , time
-
+                , yesod-form
+                
   ghc-options:    -threaded -O2 -rtsopts -with-rtsopts=-N
