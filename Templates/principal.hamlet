@@ -4,18 +4,18 @@
     <div class="col-md-2 col-lg-2 logo_imagem">
         <img class="img-responsive" src="http://66.media.tumblr.com/b560f99586e1693a8b3410a7cdd5bd1d/tumblr_inline_nhjrgyTmyQ1rp2qoz.png">
     
-    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 logo_texto">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 logo_texto">
         <h1>Whatever Diario
         <p> O jornal mais pica do youtube, pode apostar Dog
     
     <hr>
     <div class="row header_tickets">
-        <div class="col-sm-3 col-md-3 col-lg-3">
+        <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
             <div id="tecket_00" class="todos">
                 <span class="valor">100,00
-                <span class="label">valor
+                <span class="label">edicao
                 
-        <div class="col-sm-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="col-xs-4 col-sm-4 col-sm-3 col-md-3 col-lg-3">
             <div id="tecket_01" class="todos">
                 <h2 class="titulo">
                     Lorem ipsum
@@ -25,7 +25,7 @@
                     magna aliquam erat volutpat. tincidunt ut laoreet dolore
                     magna aliquam erat volutpat.                
                 
-        <div class="col-sm-4 col-sm-2 col-md-2 col-lg-2">
+        <div class="aux col-xs-4 col-sm-4 col-sm-2 col-md-2 col-lg-2">
             <div id="tecket_02" class="todos">
                 <h2 class="titulo">
                     Lorem ipsum
@@ -35,7 +35,7 @@
                     magna aliquam erat volutpat. tincidunt ut laoreet dolore
                     magna aliquam erat volutpat.
         
-        <div class="col-sm-4 col-sm-2 col-md-2 col-lg-2">
+        <div class="aux col-xs-4 col-sm-4 col-sm-2 col-md-2 col-lg-2">
             <div id="tecket_04" class="todos">
                 <h2 class="titulo">
                     Lorem ipsum
@@ -45,9 +45,9 @@
                     magna aliquam erat volutpat. tincidunt ut laoreet dolore
                     magna aliquam erat volutpat.                    
                 
-        <div class="col-sm-4 col-sm-2 col-md-2 col-lg-2">
+        <div class="col-xs-4 col-sm-4 col-sm-2 col-md-2 col-lg-2">
             <div id="tecket_03" class="todos">
-                <img class="img-responsive" src="http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg">                                          
+                <img class="img-responsive" src=@{StaticR cateye_png}>                                          
 
 <nav id="nav_affix" class="navbar navbar-inverse" data-spy="affix">
     <div class="container">
@@ -159,4 +159,21 @@
                     quis nostrud exerci tation ullamcorper suscipit lobortis nisl
                     ut aliquip ex ea commodo consequat.
                     
-<div id="section_01" class="container">                    
+<div id="section_01" class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <div class="col-md-12">
+                <h3 class="nomes_titulo">Desenvolvido por
+            <div class="col-md-4">
+                <img class="img-responsive img_eutuenois" src=@{StaticR sobek_png}>
+                <h4 class="nomes" >Ayrton Felipe
+            <div class="col-md-4">
+                <img class="img-responsive img_eutuenois" src=@{StaticR thoth_png}>
+                <h4 class="nomes" >Gabriel Mourais
+            
+            <div class="col-md-4">
+                <img class="img-responsive img_eutuenois" src=@{StaticR horus_png}>
+                <h4 class="nomes" >Tarcisio Talles     
+            
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <!-- AQUI TAMBEM                              -->
