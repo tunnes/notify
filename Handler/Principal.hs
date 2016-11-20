@@ -6,10 +6,13 @@ module Handler.Principal where
 
 import Foundation
 import Yesod.Core
+import Text.Julius
+import System.FilePath
 
 getPrincipalR :: Handler Html
 getPrincipalR = defaultLayout $ do
-    setTitle "Whatever News"
+    -- toWidgetHead $(juliusFile "Static/julius/principal.julius") >>
+    addScript (StaticR julius_principal_js)
     $(whamletFile "Templates/principal.hamlet")
 
 {-

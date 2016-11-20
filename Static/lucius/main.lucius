@@ -1,6 +1,15 @@
 /* EXTERNO --------------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+@import url('https://fonts.googleapis.com/css?family=Diplomata+SC');
+
+
+@import url('https://fonts.googleapis.com/css?family=Pirata+One');
+
+/*font-family: 'Oswald', sans-serif;*/
+/*font-family: 'Roboto', sans-serif;*/
 
 body{
     position: relative;
@@ -19,10 +28,7 @@ body{
 }
   
 #section1{
-    padding-top:50px;
-    height:500px;
-    color: #fff; 
-    background-color: #1E88E5;
+   
 }
 
 #section2{
@@ -40,9 +46,254 @@ body{
 }
 /* HEADER ---------------------------------------------------------------------- */
 .header_section{
-    margin-top: 30px;
-    font-size: 100px;
-    height: 400px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 35px;
+}
+.header_section hr{
+    border-bottom: 1px solid black;
+    width: 100%;
+    border-style: double;
+    border-width: 3px;
+    margin: 20px 0px 20px 0px;
+}
+.header_section p{
+    font-family: 'Oswald', sans-serif;
+    text-align: right;
     text-transform: uppercase;
-    font-family: 'Alfa Slab One', cursive;
+    font-size: 14px;
+    margin-right: 11px;
+    font-weight: 100;
+}
+
+.header_section h1{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    /* font-family: 'Roboto', sans-serif; */
+    font-weight: 800;
+    text-align: right;
+    font-size: 120px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+/* HEADER TICKETS ---------------------------------------------------------------------------------------------------- */
+.header_tickets{
+    /*height: 90px;*/
+}
+.todos{
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#tecket_00 { 
+    width: 100%;
+    height: 80px;
+    background-color: #333;
+}
+#tecket_00 .valor{
+    color: white;
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    margin-left: 50px;
+}
+#tecket_00 .label{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    writing-mode: tb-rl;
+    color: white;
+    padding: 0px;
+    font-size: 17px;
+    font-weight: 800;
+    text-align: center;
+    display: inline;
+}
+
+#tecket_01 { 
+    width: 100%;
+    height: 80px;
+}
+
+#tecket_02 { 
+    width: 100%;
+    height: 80px;
+}
+#tecket_04 { 
+    width: 100%;
+    height: 80px;
+}
+
+.todos h2{
+    width: 100%;
+    display: block;
+    font-weight: 900;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 0px;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.todos p {
+    font-size: 12px;
+    text-align: justify;
+    text-transform: none;
+    margin: 0px;
+}
+
+#tecket_03 { 
+    width: 100%;
+    height: 80px;
+    border: 1px solid black;
+}
+#tecket_03 img{
+    margin: 0 auto;
+    width: 45%;
+}
+
+#tecket_00 p{
+    display: inline-block;
+    width: 47%;
+}
+#tecket_00 h2{
+    display: inline-block;
+    width: 44%;
+}
+
+/* NAV-BAR --------------------------------------------------------------------- */
+.navbar-inverse{
+    color: black;
+    background-color: white; 
+    border: none;
+}
+.navbar-inverse .navbar-nav>li>a {
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    /* font-family: 'Roboto', sans-serif; */
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 13px;
+}
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    color: red;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #000;
+}
+.navbar-toggle {
+    border-radius: 0px !important;
+}
+
+/* SECTION 00 ------------------------------------------------------------------ */
+#section_00{
+    margin-top: 10px;
+    border: 1px solid black;
+    /* border-bottom: none; */
+    padding-top: 50px;
+    padding-bottom: 15px;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 40px;
+}
+#section_00 h1{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    display: block;
+    font-size: 92px;
+    font-weight: 900;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+}
+#section_00 img{
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+#section_00 p::first-letter {
+    font-family: 'Roboto', sans-serif;
+    float: left;
+    font-weight: 800;
+    font-size: 60px;
+    font-size: 6rem;
+    line-height: 40px;
+    line-height: 6rem;
+    padding-right: 10px;
+    text-transform: uppercase;
+}
+#section_00 p{
+  width: 100%;
+  /*height: 350px;*/
+  white-space: normal;
+  overflow: hidden;
+  text-align: justify;
+  text-overflow: ellipsis;
+}
+#section_01{
+    margin-top: 0px;
+    height: 200px;
+    padding-top:50px;
+    /*height: 300px;*/
+    background-color: #444;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* AJUSTANDO UNS BANGS*/
+@media screen and (max-width: 1200px) {
+  .logo_imagem{
+      display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header_section h1{
+     font-size: 80px; 
+  }
+}
+
+.noticia{
+    background-color: #e8e8e8;
+    margin-right: 1px;
+    padding: 10PX;
+}
+#noticia_secundaria h2{
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: x-large;
+}
+#noticia_secundaria p{
+    text-align: justify;
+}
+/* COISAS GENERICAS */
+.noticia_generica{
+    margin-top: 10px;
+}
+.noticia_generica img {
+    width: 100% !important;
+    height: auto !important;
+}
+.noticia_generica h2{
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+}
+
+.noticia_generica h3{
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.noticia_body{
+    background-color: #e8e8e8;
 }
