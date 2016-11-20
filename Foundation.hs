@@ -9,6 +9,7 @@ import Yesod
 import Yesod.Static
 import Text.Lucius
 import Data.Text
+import Control.Applicative
 import Data.ByteString as BS
 import Data.ByteString.Lazy as LBS
 import System.FilePath
@@ -42,12 +43,10 @@ Publicacao
 
 Noticia
     nome Text
-    descricao Text
+    descricao Textarea
     data UTCTime default=now()
     categoriaId CategoriaId
-    imagem1Id ImagemId Maybe
-    imagem2Id ImagemId Maybe
-    imagem3Id ImagemId Maybe
+    imagemId ImagemId
     deriving Show
     
 Categoria
@@ -68,6 +67,8 @@ Comentario
 |]
 
 mkYesodData "App" $(parseRoutesFile "routes")
+
+type Form a = Html -> MForm Handler (FormResult a, Widget)
 
 instance Yesod App where
 -- Inserindo componentes para funcionamento do Boostrap:

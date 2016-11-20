@@ -21,7 +21,8 @@ executable          whatever-news
                 , yesod
                 , yesod-core
                 , yesod-static
-                , text                          
+                , yesod-form
+                , text
                 , persistent                    
                 , persistent-postgresql
                 , monad-logger
