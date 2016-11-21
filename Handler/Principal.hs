@@ -1,19 +1,23 @@
-{-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE QuasiQuotes       #-}
-{-# LANGUAGE TemplateHaskell   #-}
+{-# LANGUAGE OverloadedStrings, TypeFamilies, QuasiQuotes,
+             TemplateHaskell, GADTs, FlexibleContexts,
+             MultiParamTypeClasses, DeriveDataTypeable, EmptyDataDecls,
+             GeneralizedNewtypeDeriving, ViewPatterns, FlexibleInstances #-} -- Importante quando se usa QuasiQuoters
 
 module Handler.Principal where
 
 import Foundation
-import Yesod.Core
+import Yesod
 import Text.Julius
 import System.FilePath
 
 getPrincipalR :: Handler Html
-getPrincipalR = defaultLayout $ do
-    -- toWidgetHead $(juliusFile "Static/julius/principal.julius") >>
-    addScript (StaticR julius_principal_js)
-    $(whamletFile "Templates/principal.hamlet")
+getPrincipalR = do
+    (n1:n2:n3:ns) <- runDB $ selectList [] [Asc NoticiaData, LimitTo 9]
+    defaultLayout $ do
+        -- toWidgetHead $(juliusFile "Static/julius/principal.julius") >>
+        -- runDB $ selectList [] [Asc NoticiaData] >>= \(n1:n2:n3:ns) ->
+        addScript (StaticR julius_principal_js)
+        $(whamletFile "Templates/principal.hamlet")
 
 {-
 upload

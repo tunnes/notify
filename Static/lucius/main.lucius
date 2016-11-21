@@ -321,3 +321,7 @@ body{
     margin-bottom: 30px;
     text-align: left;
 }
+.header_title{
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}

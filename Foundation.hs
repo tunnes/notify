@@ -46,11 +46,7 @@ Noticia
     descricao Textarea
     data UTCTime default=now()
     categoriaId CategoriaId
-<<<<<<< HEAD
-    imagem_id ImagemId Maybe
-=======
     imagemId ImagemId
->>>>>>> 3a09d1859e8143c21da8bf3a55115e356eec5b39
     deriving Show
     
 Categoria
