@@ -21,7 +21,8 @@ executable          whatever-news
                 , yesod
                 , yesod-core
                 , yesod-static
-                , text                          
+                , yesod-form
+                , text
                 , persistent                    
                 , persistent-postgresql
                 , monad-logger
@@ -29,5 +30,6 @@ executable          whatever-news
                 , filepath
                 , shakespeare
                 , time
-
+                , yesod-form
+                
   ghc-options:    -threaded -O2 -rtsopts -with-rtsopts=-N

@@ -6,6 +6,21 @@ module Handler.Categoria where
 
 import Foundation
 import Yesod.Core
+import Data.Text
+import Yesod.Form
+import Control.Applicative
+import Yesod.Form.Bootstrap3
+import Database.Persist.Postgresql
+
+
+{--Formulários
+formCategoria :: Form Categoria 
+formCategoria = renderDivs $ Categoria
+    <$> areq textField (bfs ("Nome da Categoria" :: Text)) Nothing
+    <*> areq checkBoxField (bfs ("Visivel" :: Text))  Nothing --}
+    
+
+
 
 -- Essa rota irá listar categorias ao Jornalista, para que ele possa atualiza-las ou deleta-las
 getCategoriaR :: Handler Html
