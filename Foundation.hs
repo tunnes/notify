@@ -46,9 +46,6 @@ Noticia
     data UTCTime default=now()
     categoriaId CategoriaId
     imagem_id ImagemId Maybe
-    -- imagem1Id ImagemId Maybe
-    -- imagem2Id ImagemId Maybe
-    -- imagem3Id ImagemId Maybe
     deriving Show
     
 Categoria
