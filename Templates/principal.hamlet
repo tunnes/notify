@@ -63,111 +63,54 @@
                 <li>
                     <a href="#">LISTAR MATÉRIAS
                 <li>
+                    <a href="#">SOU JORNALISTA    
+                <li>
                     <a href="#">SOBRE NÓS
                     
 <div id="section_00" class="container">
-    <div class="col-md-9">
-        <div id="noticia_principal" class="row noticia">
-            <div class=col-md-12>
-                <h1>
-                    <a href=@{AbrirNoticiaR $ entityKey n1}>#{noticiaNome $ entityVal n1}   
-            <div class="col-md-5">
-                <p>
-                    #{noticiaDescricao $ entityVal n1}
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                    dolor in hendrerit in vulputate velit esse molestie consequat,
-                    vel illum dolore eu feugiat nulla facilisis at vero eros et
-                    accumsan et iusto odio dignissim qui blandit.Duis autem vel 
-                    dolor in hendrerit in vulputate velit esse molestie consequat,
-                    vel illum dolore eu feugiat nulla facilisis at vero eros et
-                    accumsan et iusto odio dignissim qui blandit.
-                
-            <div class="col-md-7">
-                <img src="http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg">
+    <a class="link_noticia" href=@{AbrirNoticiaR $ entityKey n1}>
+        <div class="col-md-9">
+            <div id="noticia_principal" class="row noticia">
+                <div class=col-md-12>
+                    <h1>
+                        #{noticiaNome $ entityVal n1}   
+                <div class="col-md-5">
+                    <p>
+                        #{noticiaDescricao $ entityVal n1}
+                    
+                <div class="col-md-7">
+                    <img src="http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg">
         
     <div class="col-md-3">
-        <div id="noticia_secundaria" class="row noticia">        
-            <h3>
-                <a href=@{AbrirNoticiaR $ entityKey n2}>#{noticiaNome $ entityVal n2}
-            <p>
-                #{noticiaDescricao $ entityVal n2}
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                dolor in hendrerit in vulputate velit esse molestie consequat,
-                vel illum dolore eu feugiat nulla facilisis at vero eros et
-                accumsan et iusto odio dignissim qui blandit praesent luptatum
-                zzril delenit augue duis dolore te feugait nulla facilisi.
-                Nam liber tempor cum soluta nobis eleifend option congue
-                nihil imperdiet doming id quod mazim placerat facer possim
-                assum. Typi non habent claritatem insitam; est usus legentis
-                in iis qui facit eorum claritatem.
-                
-    <div class="col-md-12">
-        <div class="noticia_generica noticia row">
-            <div class="col-md-3">
-                <img class="img-responsive" src="http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg">
-            <div class="col-md-9">
-                <h2>
-                    <a href=@{AbrirNoticiaR $ entityKey n3}>#{noticiaNome $ entityVal n3}
+        <a class="link_noticia" href=@{AbrirNoticiaR $ entityKey n2}>
+            <div id="noticia_secundaria" class="row noticia">        
+                <h3>
+                    #{noticiaNome $ entityVal n2}
                 <p>
-                    #{noticiaDescricao $ entityVal n3}
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                    dolor in hendrerit in vulputate velit esse molestie consequat,
-                    vel illum dolore eu feugiat nulla facilisis at vero eros et
-                    accumsan et iusto odio dignissim qui blandit praesent luptatum
-                    zzril delenit augue duis dolore te feugait nulla facilisi.
-                    Nam liber tempor cum soluta nobis eleifend option congue
-                    nihil imperdiet doming id quod mazim placerat facer possim
-                    assum. Typi non habent claritatem insitam; est usus legentis
-                    in iis qui facit eorum claritatem.
+                    #{noticiaDescricao $ entityVal n2}
+
+    <div class="col-md-12">
+        <a class="link_noticia" href=@{AbrirNoticiaR $ entityKey n3}>
+            <div id="noticia_ternaria" class="noticia_generica noticia row">
+                <div class="col-md-3">
+                    <img class="img-responsive" src="http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg">
+                <div class="col-md-9">
+                    <h2>
+                        <!--<a href=@{AbrirNoticiaR $ entityKey n3}>-->
+                        #{noticiaNome $ entityVal n3}
+                    <p>
+                        #{noticiaDescricao $ entityVal n3}
 
     $forall nn <- ns
         <div class="col-md-4">
-            <div class="noticia_generica noticia row">
-                <div class="col-md-12">
-                    <h3>
-                        <a href=@{AbrirNoticiaR $ entityKey nn}>#{noticiaNome $ entityVal nn}
-                    <p>#{noticiaDescricao $ entityVal nn}
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                        magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                        quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                        ut aliquip ex ea commodo consequat.
-    <!--
-    <div class="col-md-4">
-        <div class="noticia_generica noticia row">
-            <div class="col-md-12">
-                <h3>Um titulo qualquer
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                    ut aliquip ex ea commodo consequat.
-                    
-    <div class="col-md-4">
-        <div class="noticia_generica noticia row">
-            <div class="col-md-12">
-                <h3>Um titulo qualquer
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                    ut aliquip ex ea commodo consequat.
-    -->
-                    
+            <a class="link_noticia" href=@{AbrirNoticiaR $ entityKey nn}>
+                <div class="noticia_footer noticia_generica noticia row">
+                    <div class="col-md-12">
+                        <h3>
+                            #{noticiaNome $ entityVal nn}
+                        <p>#{noticiaDescricao $ entityVal nn}
+
+
 <div id="section_01" class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -191,5 +134,5 @@
                 <img class="img-responsive img_eutuenois" src=@{StaticR sobek_png}>
                 <h4 class="nomes" >PATRICK AUGUSTO
             <div class="col-md-4">
-                <img class="img-responsive img_eutuenois" src=@{StaticR bastet_png}>
-                <h4 class="nomes" >ERICK OLIVEIRA
+                <img class="img-responsive img_eutuenois" src=@{StaticR _Image_bastet_png}>
+                <h4 class="nomes" >ERIC OLIVEIRA

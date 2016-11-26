@@ -325,3 +325,22 @@ body{
     padding-left: 15px !important;
     padding-right: 15px !important;
 }
+#noticia_principal{
+    height: 525px;  
+}
+#noticia_secundaria{
+    height: 525px;  
+}
+.noticia_footer{
+    height: 400px;
+}
+/* QUADROS DE NOTICIA */
+.link_noticia{
+    cursor: pointer;
+    color: #444;
+    text-decoration: none;
+}
+.link_noticia:hover{
+    color: #444;
+    text-decoration: none;
+}

@@ -61,10 +61,18 @@ postNoticiaR = do
             |]
             redirect NoticiaR
 
--- Abrir noticia especifica ao usuario
-getAbrirNoticiaR :: NoticiaId -> Handler Html
-getAbrirNoticiaR alid = undefined 
 
+-- Abrir noticia especifica ao usuario  ------------------------------------------------------------------------ 
+getAbrirNoticiaR :: NoticiaId -> Handler Html
+getAbrirNoticiaR noticiaID = do
+    Just noticia <- runDB $ get noticiaID 
+    defaultLayout $ do
+        [whamlet|
+            <h2> #{noticiaNome noticia}
+        |]
+        
+----------------------------------------------------------------------------------------------------------------
+        
 -- Listar noticias ao jornalista, para ele poder deleta-las ou atualiza-las
 getLisNoticiaR :: Handler Html
 getLisNoticiaR = undefined

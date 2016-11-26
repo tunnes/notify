@@ -9,6 +9,7 @@ import Foundation
 import Yesod
 import Text.Julius
 import System.FilePath
+import Yesod.Static
 
 getPrincipalR :: Handler Html
 getPrincipalR = do
