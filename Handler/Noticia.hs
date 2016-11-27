@@ -98,9 +98,13 @@ getAbrirNoticiaR noticiaID = do
 
 getTodasNoticiaR :: Handler Html
 getTodasNoticiaR = do
-    ns <- runDB $ selectList [] [Asc NoticiaData]
+    ns <- runDB $ selectList [] [Desc NoticiaData]
+    is <- runDB $ selectList [] [Desc ImagemId]
+    let tupla = (ns,is)
     defaultLayout $ do
         $(whamletFile "Templates/noticiaTodas.hamlet")
+    where
+        diretorio = "static/img/"
         
 --------------------------------------------------------------------------------------------------------------------    
 -- Listar noticias ao jornalista, para ele poder deleta-las ou atualiza-las
