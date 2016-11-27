@@ -1,6 +1,6 @@
 ^{header}                                        
 ^{nav}
-                    
+                   
 <div id="section_00" class="container">
     <div class="col-md-9">
         <div id="noticia_principal" class="row noticia">
@@ -52,6 +52,20 @@
             <div class="col-md-9">
                 <h2>
                     <a href=@{AbrirNoticiaR $ entityKey n3}>#{noticiaNome $ entityVal n3}
+    <a class="link_noticia" href=@{AbrirNoticiaR $ entityKey n1}>
+        <div class="col-md-9">
+            <div id="noticia_principal" class="row noticia">
+                <div class=col-md-12>
+                    <h1>
+                        #{noticiaNome $ entityVal n1}   
+                <div class="col-md-5">
+                    <p>
+                        #{noticiaDescricao $ entityVal n1}
+                    
+                <div class="col-md-7">
+                    <img src="http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg">
+        
+    <div class="col-md-3">
     <a class="link_noticia" href=@{AbrirNoticiaR $ entityKey n1}>
         <div class="col-md-9">
             <div id="noticia_principal" class="row noticia">

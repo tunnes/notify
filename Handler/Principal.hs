@@ -11,7 +11,6 @@ import Text.Julius
 import Data.Text
 import Yesod.Static
 import System.FilePath
-import Yesod.Static 
 
 -- Hamlets Genéricos -------------------------------------------------------------------------------------------------------
 header :: Widget
