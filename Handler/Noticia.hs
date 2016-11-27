@@ -14,6 +14,21 @@ import Control.Applicative
 import Yesod.Form.Bootstrap3
 import Data.Time (UTCTime, getCurrentTime, showGregorian, utctDay, Day)
 
+--  Widgets ----------------------------------------------------------------------------------------------------------------
+--  Estes são os 'Widgets' genericos utilizados dentro dos 'Templates', aqui estamos os utilizando pois assim conseguimos 
+--  modularizar a pagina que sera renderizada ao no lado do cliente.
+
+header :: Widget
+header = $(whamletFile "Templates/header.hamlet")
+
+nav :: Widget
+nav = $(whamletFile "Templates/nav.hamlet")
+
+footer :: Widget
+footer = $(whamletFile "Templates/footer.hamlet")
+
+---------------------------------------------------------------------------------------------------------------------------
+
 {-- uploadForm :: Html -> MForm App App (FormResult (FileInfo, Maybe Textarea, UTCTime), Widget)
 uploadForm = renderDivs $ (,,)
     <$> fileAFormReq "Image file"
@@ -62,14 +77,16 @@ postNoticiaR = do
             redirect NoticiaR
 
 
--- Abrir noticia especifica ao usuario  ------------------------------------------------------------------------ 
+--  Abrir noticia especifica ao usuario  ------------------------------------------------------------------------ 
+--  Esta função recebe um ID numerico de uma noticia e retorna uma pagina com detalhes da noticia expandida, para
+--  conseguir estes detalhes ela faz uma consulta ao banco utilizando a função get que retorna um Maybe Noticia
+--  o retorno entra dentro do pathern matching Just noticia ai temos uma noticia 'variavel' =D   
+
 getAbrirNoticiaR :: NoticiaId -> Handler Html
 getAbrirNoticiaR noticiaID = do
     Just noticia <- runDB $ get noticiaID 
     defaultLayout $ do
-        [whamlet|
-            <h2> #{noticiaNome noticia}
-        |]
+        $(whamletFile "Templates/noticiaCorpo.hamlet")
         
 ----------------------------------------------------------------------------------------------------------------
         

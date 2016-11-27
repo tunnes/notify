@@ -11,6 +11,18 @@ import Text.Julius
 import System.FilePath
 import Yesod.Static
 
+-- Hamlets Genéricos -------------------------------------------------------------------------------------------------------
+header :: Widget
+header = $(whamletFile "Templates/header.hamlet")
+
+nav :: Widget
+nav = $(whamletFile "Templates/nav.hamlet")
+
+footer :: Widget
+footer = $(whamletFile "Templates/footer.hamlet")
+
+---------------------------------------------------------------------------------------------------------------------------
+
 getPrincipalR :: Handler Html
 getPrincipalR = do
     (n1:n2:n3:ns) <- runDB $ selectList [] [Asc NoticiaData, LimitTo 9]
