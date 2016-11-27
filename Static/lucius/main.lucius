@@ -138,7 +138,11 @@ body{
 .navbar-inverse .navbar-toggle .icon-bar {
     background-color: #000;
 }
+/*.navbar-inverse .navbar-toggle {*/
+/*    border: #333; */
+/*}*/
 .navbar-toggle {
+    border: none;
     border-radius: 0px !important;
 }
 
@@ -157,7 +161,6 @@ body{
 #section_00 h1{
     font-family: 'Roboto', sans-serif;
     width: 100%;
-    display: block;
     font-size: 92px;
     font-weight: 900;
     overflow: hidden;
@@ -324,4 +327,70 @@ body{
 .header_title{
     padding-left: 15px !important;
     padding-right: 15px !important;
+}
+#noticia_principal{
+    height: 525px;  
+}
+#noticia_secundaria{
+    height: 525px;  
+}
+.noticia_footer{
+    height: 400px;
+}
+/* QUADROS DE NOTICIA */
+.link_noticia{
+    cursor: pointer;
+    color: #444;
+    text-decoration: none;
+}
+.link_noticia:hover{
+    color: #444;
+    text-decoration: none;
+}
+
+/* NOTICIA CORPO ------------------------------------------------------------------------------------------- */
+.noticiaCorpo{
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid black;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+}
+.noticiaCorpo p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    width: 100%;
+    text-align: justify;
+}
+.noticiaCorpo h1{
+    font-size: 90px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.noticiaCorpo h3{
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 30px;    
+    text-transform: uppercase;
+}
+.noticiaCorpo .row{
+    background-color: #e8e8e8;
+    padding-bottom: 15px;
+}
+.noticiaCorpo p::first-letter{
+    float: left;
+    font-weight: 800;
+    font-size: 40px;
+    font-size: 6rem;
+    line-height: 40px;
+    line-height: 6rem;
+    padding-right: 10px;
+    text-transform: uppercase;
+}
+
+/* NOTICIA LISTAR ------------------------------------------------------------------------------------------ */
+.row_lista{
+    padding-top: 15px;
+    margin-bottom: 15px;
 }
