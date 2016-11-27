@@ -1,13 +1,13 @@
 ^{header} 
 ^{nav}
-        
+                       
 <div class="container noticiaCorpo">
-    $forall  noticia <- ns 
+    $forall   (noticia, imagem) <- (Prelude.zip ns is)
         <div class="col-md-12">
             <a class="link_noticia" href=@{AbrirNoticiaR $ entityKey noticia}>
                 <div class="row row_lista">
                     <div class="col-md-3">
-                        <img class="img-responsive" src="eae">
+                        <img class="img-responsive" src=#{diretorio ++ (imagemConteudo $ entityVal imagem)}>
                     <div class="col-md-9">
                         <h3>#{noticiaNome $ entityVal noticia}         
                         <p>#{noticiaDescricao $ entityVal noticia}
