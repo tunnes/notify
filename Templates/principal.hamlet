@@ -87,7 +87,7 @@
                     accumsan et iusto odio dignissim qui blandit.
                 
             <div class="col-md-7">
-                <img src="http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg">
+                <img src=#{diretorio ++ (imagemConteudo $ entityVal i1)}>
         
     <div class="col-md-3">
         <div id="noticia_secundaria" class="row noticia">        
@@ -112,7 +112,7 @@
     <div class="col-md-12">
         <div class="noticia_generica noticia row">
             <div class="col-md-3">
-                <img class="img-responsive" src="http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg">
+                <img class="img-responsive" src=#{diretorio ++ (imagemConteudo $ entityVal i3)}>
             <div class="col-md-9">
                 <h2>
                     <a href=@{AbrirNoticiaR $ entityKey n3}>#{noticiaNome $ entityVal n3}

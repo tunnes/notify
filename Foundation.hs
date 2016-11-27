@@ -1,5 +1,5 @@
 {-# LANGUAGE OverloadedStrings, TypeFamilies, QuasiQuotes,
-             TemplateHaskell, GADTs, FlexibleContexts,
+             TemplateHaskell, GADTs, FlexibleContexts, TypeSynonymInstances,
              MultiParamTypeClasses, DeriveDataTypeable, EmptyDataDecls,
              GeneralizedNewtypeDeriving, ViewPatterns, FlexibleInstances #-} -- Importante quando se usa QuasiQuoters
 
@@ -7,6 +7,7 @@ module Foundation where
 
 import Yesod
 import Yesod.Static
+import Yesod.Core.Handler
 import Text.Lucius
 import Data.Text
 import Control.Applicative
@@ -56,7 +57,7 @@ Categoria
     deriving Show
 
 Imagem
-    conteudo Text
+    conteudo String  
     deriving Show
 
 Comentario
@@ -99,5 +100,3 @@ instance YesodPersist App where
 
 instance RenderMessage App FormMessage where
     renderMessage _ _ = defaultFormMessage
-        
-    

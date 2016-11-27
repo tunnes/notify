@@ -14,13 +14,7 @@ import Control.Applicative
 import Yesod.Form.Bootstrap3
 import Data.Time (UTCTime, getCurrentTime, showGregorian, utctDay, Day)
 
-{-- uploadForm :: Html -> MForm App App (FormResult (FileInfo, Maybe Textarea, UTCTime), Widget)
-uploadForm = renderDivs $ (,,)
-    <$> fileAFormReq "Image file"
-    <*> aopt textareaField "Image description" Nothing
-    <*> aformM (liftIO getCurrentTime) --}
-
-formNoticia :: Form (Text,Textarea,CategoriaId, FileInfo)
+formNoticia :: Form (Text, Textarea, CategoriaId, FileInfo)
 formNoticia = renderBootstrap $ (,,,)
     <$> areq textField                (bfs ("Titulo" :: Text))     Nothing 
     <*> areq textareaField            (bfs ("Descrição" :: Text))  Nothing
@@ -48,10 +42,10 @@ postNoticiaR = do
     ((result, _), _) <- runFormPost formNoticia
     case result of
         FormSuccess (titulo,descricao,categoria,imagem) -> do
-            writeToServer imagem  
-            alid <- runDB $ insert (Imagem (fileName imagem))
+            imagemnome <- writeToServer imagem
+            alid <- runDB $ insert (Imagem $ imagemnome)
             now <- liftIO getCurrentTime
-            alid <- runDB $ insert (Noticia titulo descricao now categoria alid)
+            noid <- runDB $ insert (Noticia titulo descricao now categoria alid)
             defaultLayout [whamlet|
                 <p>Noticia cadastrada com sucesso!
             |]
