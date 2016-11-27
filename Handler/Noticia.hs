@@ -14,9 +14,9 @@ import Control.Applicative
 import Yesod.Form.Bootstrap3
 import Data.Time (UTCTime, getCurrentTime, showGregorian, utctDay, Day)
 
---  Widgets ----------------------------------------------------------------------------------------------------------------
---  Estes são os 'Widgets' genericos utilizados dentro dos 'Templates', aqui estamos os utilizando pois assim conseguimos 
---  modularizar a pagina que sera renderizada ao no lado do cliente.
+--  Visualizar Noticia ---------------------------------------------------------------------------------------------
+--  Estes são os 'Widgets' genericos utilizados dentro dos 'Templates', aqui estamos os utilizando pois assim 
+--  conseguimos modularizar a pagina que sera renderizada ao no lado do cliente.
 
 header :: Widget
 header = $(whamletFile "Templates/header.hamlet")
@@ -27,7 +27,7 @@ nav = $(whamletFile "Templates/nav.hamlet")
 footer :: Widget
 footer = $(whamletFile "Templates/footer.hamlet")
 
----------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
 
 {-- uploadForm :: Html -> MForm App App (FormResult (FileInfo, Maybe Textarea, UTCTime), Widget)
 uploadForm = renderDivs $ (,,)
@@ -76,8 +76,7 @@ postNoticiaR = do
             |]
             redirect NoticiaR
 
-
---  Abrir noticia especifica ao usuario  ------------------------------------------------------------------------ 
+--  Visualizar Noticia --------------------------------------------------------------------------------------------- 
 --  Esta função recebe um ID numerico de uma noticia e retorna uma pagina com detalhes da noticia expandida, para
 --  conseguir estes detalhes ela faz uma consulta ao banco utilizando a função get que retorna um Maybe Noticia
 --  o retorno entra dentro do pathern matching Just noticia ai temos uma noticia 'variavel' =D   
@@ -88,8 +87,21 @@ getAbrirNoticiaR noticiaID = do
     defaultLayout $ do
         $(whamletFile "Templates/noticiaCorpo.hamlet")
         
-----------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+
+
+--  Visualizar Todas Noticias -------------------------------------------------------------------------------------- 
+--  Esta função realiza uma consulta e retorna uma lista de noticias com uma informações resumidas de cada uma, 
+--  foi utilizado o selectList para realizar a consulta e os bons e velhos widgets de header e footer, ao clicar 
+--  em ver mais o usuario sera redirecionado para a pagina de visualização de noticia.
+
+getTodasNoticiaR :: Handler Html
+getTodasNoticiaR = do
+    ns <- runDB $ selectList [] [Asc NoticiaData]
+    defaultLayout $ do
+        $(whamletFile "Templates/noticiaTodas.hamlet")
         
+--------------------------------------------------------------------------------------------------------------------    
 -- Listar noticias ao jornalista, para ele poder deleta-las ou atualiza-las
 getLisNoticiaR :: Handler Html
 getLisNoticiaR = undefined

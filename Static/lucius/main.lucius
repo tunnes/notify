@@ -351,24 +351,46 @@ body{
 /* NOTICIA CORPO ------------------------------------------------------------------------------------------- */
 .noticiaCorpo{
     margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
     border: 1px solid black;
     padding-top: 20px;
     padding-bottom: 15px;
     margin-bottom: 40px;
-}
-.noticiaCorpo .row{
-    background-color: #e8e8e8;
-    padding-bottom: 15px;
-}
-.noticiaCorpo h1{
-    font-family: 'Roboto', sans-serif;
-    font-size: 92px;
-    font-weight: 900;
-    text-transform: uppercase;
 }
 .noticiaCorpo p{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     width: 100%;
     text-align: justify;
+}
+.noticiaCorpo h1{
+    font-size: 90px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.noticiaCorpo h3{
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 30px;    
+    text-transform: uppercase;
+}
+.noticiaCorpo .row{
+    background-color: #e8e8e8;
+    padding-bottom: 15px;
+}
+.noticiaCorpo p::first-letter{
+    float: left;
+    font-weight: 800;
+    font-size: 40px;
+    font-size: 6rem;
+    line-height: 40px;
+    line-height: 6rem;
+    padding-right: 10px;
+    text-transform: uppercase;
+}
+
+/* NOTICIA LISTAR ------------------------------------------------------------------------------------------ */
+.row_lista{
+    padding-top: 15px;
+    margin-bottom: 15px;
 }

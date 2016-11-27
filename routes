@@ -1,6 +1,7 @@
 /                                                      PrincipalR         GET
 /noticia                                               NoticiaR           GET POST
 /noticia/mostrar/#NoticiaId                            AbrirNoticiaR      GET
+/noticia/todas                                         TodasNoticiaR      GET
 /noticia/att/#NoticiaId                                AttNoticiaR        POST
 /noticia/del/#NoticiaId                                DelNoticiaR        POST
 /noticia/listar                                        LisNoticiaR        GET
