@@ -47,7 +47,7 @@ getCadastroR :: Handler Html
 getCadastroR = do
             (widget, enctype) <- generateFormPost formJornalista
             defaultLayout [whamlet|
-                    <div class="container">
+            <div class="container">
                         <div class="row cab">
                             <div class="col-md-2 col-lg-2 logo_imagem">
                                 <img class="img-responsive" src="http://66.media.tumblr.com/b560f99586e1693a8b3410a7cdd5bd1d/tumblr_inline_nhjrgyTmyQ1rp2qoz.png">
@@ -129,17 +129,17 @@ postLoginR = do
 
 
 
--- Essa rota irá trazer a pagina do perfil do jornalista
+-- Essa rota ira trazer a pagina do perfil do jornalista
 getPerfilR :: Handler Html
 getPerfilR = do 
     jId <- lookupSession "_ID"
     case jId of
        Just str -> do
             Just (Entity jid prophet) <- runDB $ selectFirst [JornalistaLoginId ==. (read . unpack $ str)] []
+            publicacao <- runDB $ selectList [PublicacaoJornalistaId ==. (read . unpack $ str)] []
             defaultLayout $ do
                 $(whamletFile "Templates/perfil.hamlet")           
        Nothing -> redirect PrincipalR
-    
 
 -- Essa rota irá efetuar o logout do jornalista
 postLogoutR :: Handler Html

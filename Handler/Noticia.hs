@@ -27,14 +27,6 @@ nav = $(whamletFile "Templates/nav.hamlet")
 footer :: Widget
 footer = $(whamletFile "Templates/footer.hamlet")
 
---------------------------------------------------------------------------------------------------------------------
-
-{-- uploadForm :: Html -> MForm App App (FormResult (FileInfo, Maybe Textarea, UTCTime), Widget)
-uploadForm = renderDivs $ (,,)
-    <$> fileAFormReq "Image file"
-    <*> aopt textareaField "Image description" Nothing
-    <*> aformM (liftIO getCurrentTime) --}
-
 formNoticia :: Form (Text,Textarea,CategoriaId, FileInfo)
 
 formNoticia = renderBootstrap $ (,,,)
