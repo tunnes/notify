@@ -13,4 +13,6 @@
                     <a href=@{NoticiaR}>NOVA NOTICIA    
                
                 <li>
-                    <a href="@{LogoutR}">LOGOUT
+                    <form action=@{LogoutR} method="post" id="logout">
+                        <button type="submit">LOGOUT
+                    
