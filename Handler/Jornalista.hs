@@ -136,7 +136,14 @@ getPerfilR = do
     case jId of
        Just str -> do
             Just (Entity jid prophet) <- runDB $ selectFirst [JornalistaLoginId ==. (read . unpack $ str)] []
+            pub <- runDB $ selectList [PublicacaoJornalistaId ==. jid] []
+                    -- sequence :: [m a] -> m [a]
+                    -- [IO "1", IO "2"] = IO ["1", "2"]
+            noticia <- sequence $ fmap (runDB . get404 . publicacaoNoticiaId . entityVal) pub
+            cats <- sequence $ fmap (runDB . get404 . noticiaCategoriaId) noticia
+            notCat <- return $ Prelude.zip noticia cats
             defaultLayout $ do
+                $(whamletFile "Templates/navJornalista.hamlet")
                 $(whamletFile "Templates/perfil.hamlet")           
        Nothing -> redirect PrincipalR
     

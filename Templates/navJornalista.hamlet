@@ -11,7 +11,6 @@
                     <a href="#">MEU PERFIL
                 <li>
                     <a href=@{NoticiaR}>NOVA NOTICIA    
-                <li>
-                    <a href="#">MINHAS NOTICIAS
+               
                 <li>
                     <a href="@{LogoutR}">LOGOUT
