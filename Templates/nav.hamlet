@@ -12,8 +12,6 @@
                 <li>
                     <a href="@{TodasNoticiaR}">LISTAR NOTÍCIAS
                 <li>
-                    <a href="#">SOBRE NÓS
-                <li>
                     <a href="@{CadastroR}">NOVO JORNALISTA                    
                 <li>
                     <a href="@{LoginR}">LOGIN    
