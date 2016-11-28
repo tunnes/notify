@@ -13,7 +13,7 @@
                         #{noticiaDescricao $ entityVal n1}
                     
                 <div class="col-md-7">
-                    <img src=#{diretorio ++ (imagemConteudo $ entityVal i1)}>
+                    <img src=#{diretorio ++ (imagemConteudo $ entityVal i1)} onError="this.onerror=null;this.src='http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg';">
         
     <div class="col-md-3">
         <a class="link_noticia" href=@{AbrirNoticiaR $ entityKey n2}>
@@ -27,7 +27,7 @@
         <a class="link_noticia" href=@{AbrirNoticiaR $ entityKey n3}>
             <div id="noticia_ternaria" class="noticia_generica noticia row">
                 <div class="col-md-3">
-                    <img class="img-responsive" src=#{diretorio ++ (imagemConteudo $ entityVal i3)}>
+                    <img class="img-responsive" src=#{diretorio ++ (imagemConteudo $ entityVal i3)} onError="this.onerror=null;this.src='http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg';">
                 <div class="col-md-9">
                     <h2>
                         <!--<a href=@{AbrirNoticiaR $ entityKey n3}>-->

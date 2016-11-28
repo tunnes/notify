@@ -7,7 +7,7 @@
             <div class=col-md-12>
                 <h1> #{ noticiaNome noticia}
             <div class="col-md-5">
-                <img class="img-responsive" src="http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg">
+                <img class="img-responsive" src="img" onError="this.onerror=null;this.src='http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg';">
                 
             <div class="col-md-7">
                 <p>  #{ noticiaDescricao noticia}

@@ -7,7 +7,7 @@
             <a class="link_noticia" href=@{AbrirNoticiaR $ entityKey noticia}>
                 <div class="row row_lista">
                     <div class="col-md-3">
-                        <img class="img-responsive" src="eae">
+                        <img class="img-responsive" src="eae" onError="this.onerror=null;this.src='http://www.uoduckstore.com/c.3841022/sca-dev-montblanc/img/no_image_available.jpeg';">
                     <div class="col-md-9">
                         <h3>#{noticiaNome $ entityVal noticia}         
                         <p>#{noticiaDescricao $ entityVal noticia}
