@@ -12,6 +12,16 @@ import Database.Persist.Postgresql
 import Yesod.Form.Bootstrap3
 import Data.Time (UTCTime, getCurrentTime, showGregorian, utctDay, Day)
 
+
+-- Hamlets Genéricos --------------------------------------------------------------------
+nav :: Widget 
+nav = $(whamletFile "Templates/nav.hamlet")
+
+footer :: Widget
+footer = $(whamletFile "Templates/footer.hamlet")
+
+-----------------------------------------------------------------------------------------
+
 formLogin :: Form Login
 formLogin = renderBootstrap $ Login
     <$> areq textField     (bfs ("Login" :: Text)) Nothing
@@ -31,9 +41,12 @@ getCadastroR :: Handler Html
 getCadastroR = do
             (widget, enctype) <- generateFormPost formJornalista
             defaultLayout [whamlet|
-                <form method=post action=@{CadastroR} enctype=#{enctype}>
-                    ^{widget}
-                    <input type="submit" value="Cadastrar-se">
+                        
+                    <div class="container">
+                        <form method=post action=@{CadastroR} enctype=#{enctype}>
+                            ^{widget}
+                            <input type="submit" value="Cadastrar-se">
+                    ^{footer}
             |]
 
 -- Essa rota irá receber o cadastro afim de armazena-lo no banco de dados
@@ -42,11 +55,18 @@ postCadastroR = do
     ((result, _), _) <- runFormPost formJornalista
     case result of 
         FormSuccess (nome, email, nascimento, login, senha, rsenha) -> do
-             alid <- runDB $ insert (Login login senha)
-             alid <- runDB $ insert (Jornalista alid nome email nascimento)
-             defaultLayout [whamlet|
-                <p>Cadastrou-se com sucesso!
-            |]
+        -- aqui precisa verificar se as senhas são iguais
+             case senha == rsenha of
+                 True -> do
+                     lid <- runDB $ insert (Login login senha)
+                     jorn <- runDB $ insert (Jornalista lid nome email nascimento)
+                     defaultLayout [whamlet|
+                        <p>Cadastrou-se com sucesso!
+                     |]
+                 False -> do
+                      defaultLayout [whamlet|
+                            <p>As senhas devem ser iguais
+                      |]
         _ -> do
              defaultLayout [whamlet|
                 <p>Preencha os campos corretamente!
@@ -58,9 +78,12 @@ getLoginR :: Handler Html
 getLoginR = do
             (widget, enctype) <- generateFormPost formLogin
             defaultLayout [whamlet|
-                <form method=post action=@{LoginR} enctype=#{enctype}>
-                    ^{widget}
-                    <input type="submit" value="Entrar">
+             --jogar aquii
+                    <div class="container">
+                        <form method=post action=@{LoginR} enctype=#{enctype}>
+                            ^{widget}
+                                <input type="submit" value="Entrar">
+                ^{footer}
             |]
 
 -- Essa rota irá levar os dados de login até o servidor afim de efetuar a verificação
@@ -73,9 +96,8 @@ postLoginR = do
             case jornalista of
                 Nothing -> redirect LoginR
                 Just (Entity jid jNome) -> do
-                     defaultLayout[whamlet|
-                        <p> Esta logado 
-                     |]
+                    setSession "_ID" (pack $ show jid)
+                    redirect PerfilR
             
         _ -> do
              defaultLayout [whamlet|
@@ -86,8 +108,19 @@ postLoginR = do
 
 -- Essa rota irá trazer a pagina do perfil do jornalista
 getPerfilR :: Handler Html
-getPerfilR = undefined
+getPerfilR = do 
+    jId <- lookupSession "_ID"
+    case jId of
+       Just str -> do
+            defaultLayout $ do
+                $(whamletFile "Templates/perfil.hamlet")
+       Nothing -> redirect PrincipalR
+        
+        
+
 
 -- Essa rota irá efetuar o logout do jornalista
 postLogoutR :: Handler Html
-postLogoutR = undefined
+postLogoutR = do
+    deleteSession "_ID"
+    redirect PrincipalR

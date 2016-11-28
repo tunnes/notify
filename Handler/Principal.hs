@@ -32,4 +32,4 @@ getPrincipalR = do
         addScript (StaticR julius_principal_js)
         $(whamletFile "Templates/principal.hamlet")
     where
-        diretorio = "static/img/"
+        diretorio = "https://gmoraizyesod-gmoraiz.c9users.io/static/img/"

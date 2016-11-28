@@ -84,7 +84,8 @@ postNoticiaR = do
 
 getAbrirNoticiaR :: NoticiaId -> Handler Html
 getAbrirNoticiaR noticiaID = do
-    Just noticia <- runDB $ get noticiaID 
+    Just noticia <- runDB $ get noticiaID
+    Just imagem  <- runDB $ selectFirst [ImagemId ==. noticiaImagemId noticia] []
     defaultLayout $ do
         $(whamletFile "Templates/noticiaCorpo.hamlet")
         
@@ -100,11 +101,8 @@ getTodasNoticiaR :: Handler Html
 getTodasNoticiaR = do
     ns <- runDB $ selectList [] [Desc NoticiaData]
     is <- runDB $ selectList [] [Desc ImagemId]
-    let tupla = (ns,is)
     defaultLayout $ do
         $(whamletFile "Templates/noticiaTodas.hamlet")
-    where
-        diretorio = "static/img/"
         
 --------------------------------------------------------------------------------------------------------------------    
 -- Listar noticias ao jornalista, para ele poder deleta-las ou atualiza-las
@@ -130,6 +128,9 @@ writeToServer file = do
 
 imageFilePath :: String -> FilePath
 imageFilePath f = uploadDirectory </> f
+
+diretorio :: FilePath
+diretorio = "https://gmoraizyesod-gmoraiz.c9users.io/static/img/"
 
 uploadDirectory :: FilePath
 uploadDirectory = "Static/img"
