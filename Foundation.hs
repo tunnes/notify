@@ -72,11 +72,12 @@ mkYesodData "App" $(parseRoutesFile "routes")
 type Form a = Html -> MForm Handler (FormResult a, Widget)
 
 instance Yesod App where
--- Inserindo componentes para funcionamento do Boostrap:
--- "Sobrescrevendo" a função defaultLayout. widgetToPageContent retorna uma estrutura separada em 'head' e 'body'.
+
+-- Inserindo componentes para funcionamento do Boostrap ---------------------------------------------------------------------------------------
+-- Com uma função anonima 'Lambda' e realizada a sobrescrita da função defaultLayout ela recebe um widgetToPageContent e retorna uma estrutura 
+-- separada em 'head' e 'body', com isto conseguimos fixar uma unica folha de estilos e todas as 'meta tags' utilizadas no projeto. 
 
     defaultLayout widget = widgetToPageContent (toWidget $(luciusFile "Static/lucius/main.lucius") >> widget) >>= \pageContent ->
-    -- defaultLayout widget = widgetToPageContent widget >>= \pageContent -> 
         withUrlRenderer [hamlet|
             <!doctype html>
                 <html lang="PT-BR">
@@ -90,6 +91,8 @@ instance Yesod App where
                         ^{pageHead pageContent}
                     ^{pageBody pageContent}
         |]
+
+-- --------------------------------------------------------------------------------------------------------------------------------------------
 
 instance YesodPersist App where
     type YesodPersistBackend App = SqlBackend

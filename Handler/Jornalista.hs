@@ -10,6 +10,7 @@ import Yesod.Static
 import Data.Text
 import Control.Applicative
 import Database.Persist.Postgresql
+
 import Yesod.Form.Bootstrap3
 import Data.Time (UTCTime, getCurrentTime, showGregorian, utctDay, Day)
 
@@ -45,7 +46,11 @@ formJornalista =  renderBootstrap $ (,,,,,)
 -- Essa rota irá abrir a pagina de cadastro de jornalista
 getCadastroR :: Handler Html
 getCadastroR = do
+            -- (widget, enctype) <- generateFormPost formJornalista
             (widget, enctype) <- generateFormPost formJornalista
+            -- (widget, enctype) <- generateFormPost $ renderBootstrap3 (BootstrapHorizontalForm (ColSm 0) (ColSm 4) (ColSm 0) (ColSm 6) (ColSm 6) (ColSm 6)) formJornalista
+            -- (Text, Text, Day, Text, Text, Text)
+            -- (widget, enctype) <- generateFormPost $ (BootstrapHorizontalForm (ColSm 4) (ColSm 4) (ColSm 4) (ColSm 4) (ColSm 4) (ColSm 4)) formJornalista            
             defaultLayout [whamlet|
             <div class="container">
                         <div class="row cab">
@@ -54,7 +59,7 @@ getCadastroR = do
                             <div class="col-md-8 col-lg-8">
                                 <h1 id="perf">Cadastre-se    
                     <div class="container">
-                        <form method=post action=@{CadastroR} enctype=#{enctype}>
+                        <form .form-horizontal method=post action=@{CadastroR} enctype=#{enctype}>
                             ^{widget}
                             <input type="submit" value="Cadastrar-se">
                     ^{footer}
@@ -121,11 +126,6 @@ postLoginR = do
             |]
         
 -- "LoginKey {unLoginKey = SqlBackendKey {unSqlBackendKey = 2}}"
-
---openNoticias :: PessoaId -> Handler Html
---openNoticias nid = do
-  --           pessoa <- runDB $ get404 pid 
-    --         dpto <- runDB $ get404 (pessoaDeptoid pessoa)
 
 
 

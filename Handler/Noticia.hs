@@ -45,9 +45,15 @@ getNoticiaR :: Handler Html
 getNoticiaR = do
             (widget, enctype) <- generateFormPost formNoticia
             defaultLayout [whamlet|
-                <form method=post action=@{NoticiaR} enctype=#{enctype}>
-                    ^{widget}
-                    <input type="submit" value="Cadastrar Noticia">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                        <div class="col-md-8">
+                            <div class="cadatro_noticia_title">
+                                <h2>HEY, <br>  ALGUMA GRANDE NOVIDADE !?             
+                            <form method=post action=@{NoticiaR} enctype=#{enctype}>
+                                ^{widget}
+                                <input  class="cadatro_noticia_button" type="submit" value="Cadastrar Noticia">
             |]--}
 
 -- Cadastrar uma nova noticia

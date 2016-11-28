@@ -8,10 +8,10 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="@{PrincipalR }">PÁGINA PRINCIPAL
+                    <a href="@{PrincipalR}">PÁGINA PRINCIPAL
                 <li>
-                    <a href="@{TodasNoticiaR }">MODO TROUXA
+                    <a href="@{TodasNoticiaR}">LISTAR NOTÍCIAS
                 <li>
-                    <a href="">SOU JORNALISTA    
+                    <a href="@{CadastroR}">NOVO JORNALISTA                    
                 <li>
-                    <a href="#">SOBRE NÓS
+                    <a href="@{LoginR}">LOGIN    
