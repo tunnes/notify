@@ -394,3 +394,85 @@ body{
     padding-top: 15px;
     margin-bottom: 15px;
 }
+
+/* Perfil */
+.cab{
+    border-bottom: 1px solid black;
+    margin-bottom: 3%;
+}
+#perf{
+    font-size: 5em;
+}
+#jinfo{
+    margin-right: 4%;
+    padding: 0px;
+}
+#jinfo span, #jinfo2 span{
+    display: block;
+    border-bottom: 1px solid black;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1%;
+}
+#jinfo2 #noticias2{
+    background-color: #e8e8e8;
+    margin: 1%;
+}
+.bolds{
+    font-weight: bold;
+}
+#pd{
+    padding: 2%;
+}
+#pd *{
+    font-size: 1.3em;
+    margin: 3%;
+}
+#jinfo, #jinfo2{
+    border: 1px solid black;
+    min-height: 500px;
+}
+/* LOGIN ----------------------------------------------------------------------------------------------------- */
+.login_title h2{
+    font-weight: 800;
+    font-size: 45px;
+}
+.login_title {
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.login_submit{
+    width: 120px;
+    margin-top: 15px;
+    height: 26px;
+    float: right;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: roboto;
+    border-radius: 0px;
+    border: none;
+}
+.form-control {
+    margin-bottom: 8px !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    
+}
+.fake_buttom{
+    text-decoration: none;
+    color: #333;
+}
+.fake_buttom::hover{
+    text-decoration: none;
+    color: #333;
+}
+.fake_buttom input{
+    background-color: #dddddd;
+    /* padding-left: 10px; */
+    margin-right: 5px;
+    width: 140px;
+    text-align: center;
+    cursor: pointer;
+}
