@@ -60,11 +60,6 @@ Imagem
     conteudo String  
     deriving Show
 
-Comentario
-    descricacao Text
-    email Text
-    noticiaId NoticiaId
-    deriving Show
 |]
 
 mkYesodData "App" $(parseRoutesFile "routes")
