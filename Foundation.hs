@@ -87,15 +87,28 @@ instance Yesod App where
                         ^{pageHead pageContent}
                     ^{pageBody pageContent}
         |]
-
--- --------------------------------------------------------------------------------------------------------------------------------------------
-
+        
+    authRoute _                       = Just LoginR
+    isAuthorized LoginR _             = return Authorized
+    isAuthorized (AbrirNoticiaR _) _  = return Authorized
+    isAuthorized TodasNoticiaR _      = return Authorized
+    isAuthorized CadastroR _          = return Authorized
+    isAuthorized _ _                  = estaAutenticado
+    
+estaAutenticado :: Handler AuthResult -- Funcao que verifica sessao
+estaAutenticado = do
+    msu <- lookupSession "_ID"
+    case msu of
+        Just _  -> return Authorized
+        Nothing -> return AuthenticationRequired
+        
 instance YesodPersist App where
     type YesodPersistBackend App = SqlBackend
     runDB f = do
         master <- getYesod
         let pool = connPool master
         runSqlPool f pool
+
 
 instance RenderMessage App FormMessage where
     renderMessage _ _ = defaultFormMessage

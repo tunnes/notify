@@ -503,3 +503,9 @@ body{
     border-radius: 0px;
     border: none;
 }
+
+/* CADASTRO JORNALISTA */
+/*#hident2{*/
+/*    width: 50%;*/
+/*    display: inline;*/
+/*}*/
