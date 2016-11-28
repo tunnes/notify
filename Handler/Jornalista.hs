@@ -52,7 +52,7 @@ getCadastroR = do
             -- (Text, Text, Day, Text, Text, Text)
             -- (widget, enctype) <- generateFormPost $ (BootstrapHorizontalForm (ColSm 4) (ColSm 4) (ColSm 4) (ColSm 4) (ColSm 4) (ColSm 4)) formJornalista            
             defaultLayout [whamlet|
-                    <div class="container">
+            <div class="container">
                         <div class="row cab">
                             <div class="col-md-2 col-lg-2 logo_imagem">
                                 <img class="img-responsive" src="http://66.media.tumblr.com/b560f99586e1693a8b3410a7cdd5bd1d/tumblr_inline_nhjrgyTmyQ1rp2qoz.png">
@@ -129,7 +129,7 @@ postLoginR = do
 
 
 
--- Essa rota irá trazer a pagina do perfil do jornalista
+-- Essa rota ira trazer a pagina do perfil do jornalista
 getPerfilR :: Handler Html
 getPerfilR = do 
     jId <- lookupSession "_ID"
@@ -146,7 +146,6 @@ getPerfilR = do
                 $(whamletFile "Templates/navJornalista.hamlet")
                 $(whamletFile "Templates/perfil.hamlet")           
        Nothing -> redirect PrincipalR
-    
 
 -- Essa rota irá efetuar o logout do jornalista
 postLogoutR :: Handler Html

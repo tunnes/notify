@@ -1,24 +1,16 @@
-
-           
-            
-    <div class="row" style="margin-top: 100px;">
-        <div class="col-md-3 col-lg-3" id="jinfo">
-            <span>Seus dados
-            <div class="row" id="pd">
-                <div class="col-md-12 bolds">E-mail
-                <div class="col-md-12">#{jornalistaEmail prophet}
-                <div class="col-md-12 bolds"> Data de Nascimento
-                <div class="col-md-12">#{show $ jornalistaNascimento prophet}
-                
-        <div class="col-md-8 col-lg-8" id="jinfo2">
-            <span>Suas notícias
-            $forall (nvals, cat) <- notCat
-                <div class="row" id="noticias2">
-                    <div class="col-md-12 col-lg-12">
-                        <h2 class="col-md-9 col-lg-9"> #{noticiaNome nvals}
-                        <h3 class="col-md-3 col-lg-3"> #{categoriaNome cat}
-                        <p class="col-md-12"> #{noticiaDescricao nvals}
-                            
-                        
-                     
-                    
+<div class="row" style="margin-top:100px;">
+    <div class="col-md-3 col-lg-3" id="jinfo">
+        <span>Seus dados
+        <div class="row" id="pd">
+            <div class="col-md-12 bolds">E-mail
+            <div class="col-md-12">#{jornalistaEmail prophet}
+            <div class="col-md-12 bolds"> Data de Nascimento
+            <div class="col-md-12">#{show $ jornalistaNascimento prophet}
+    <div class="col-md-8 col-lg-8" id="jinfo2">
+        <span>Suas notícias
+        $forall (nvals, cat) <- notCat
+            <div class="row" id="noticias2">
+                <div class="col-md-12 col-lg-12">
+                    <h2 class="col-md-9 col-lg-9"> #{noticiaNome nvals}
+                    <h3 class="col-md-3 col-lg-3"> #{categoriaNome cat}
+                    <p class="col-md-12"> #{noticiaDescricao nvals}
