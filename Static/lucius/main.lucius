@@ -476,3 +476,25 @@ body{
     text-align: center;
     cursor: pointer;
 }
+
+/* CADASTRO DE NOTICIA -----------------------------------------------------------------------------------------------  */
+
+.cadatro_noticia_title h2{
+    font-weight: 800;
+    font-size: 50px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.cadatro_noticia_button {
+    width: 160px;
+    margin-top: 15px;
+    height: 26px;
+    float: right;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: roboto;
+    border-radius: 0px;
+    border: none;
+}

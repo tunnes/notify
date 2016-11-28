@@ -12,6 +12,6 @@
                 <li>
                     <a href="@{TodasNoticiaR }">MODO TROUXA
                 <li>
-                    <a href="">SOU JORNALISTA    
+                    <a href="@{LoginR }">SOU JORNALISTA    
                 <li>
-                    <a href="#">SOBRE NÓS
+                    <a href="@{CadastroR }">SEJA UM JORNALISTA
