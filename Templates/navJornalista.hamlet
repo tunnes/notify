@@ -1,0 +1,16 @@
+<nav id="nav_affix" class="navbar navbar-inverse" data-spy="affix">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar">
+                <span class="icon-bar">
+                <span class="icon-bar">
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">MEU PERFIL
+                <li>
+                    <a href=@{NoticiaR}>NOVA NOTICIA    
+               
+                <li>
+                    <a href="@{LogoutR}">LOGOUT

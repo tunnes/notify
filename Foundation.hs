@@ -81,6 +81,7 @@ instance Yesod App where
                         <title>Whatever News
                         <meta name="viewport" content="width=device-width, initial-scale=1"/>
                         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+                        <link rel="shortcut icon" type="image/png" href=@{StaticR fav_whatever_png}/>
                         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
                         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
                         ^{pageHead pageContent}

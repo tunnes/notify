@@ -24,6 +24,9 @@ header = $(whamletFile "Templates/header.hamlet")
 nav :: Widget
 nav = $(whamletFile "Templates/nav.hamlet")
 
+navJornalista :: Widget
+navJornalista = $(whamletFile "Templates/navJornalista.hamlet")
+
 footer :: Widget
 footer = $(whamletFile "Templates/footer.hamlet")
 
@@ -45,6 +48,7 @@ getNoticiaR :: Handler Html
 getNoticiaR = do
             (widget, enctype) <- generateFormPost formNoticia
             defaultLayout [whamlet|
+                ^{navJornalista}
                 <div class="container">
                     <div class="row">
                         <div class="col-md-2">
@@ -66,6 +70,9 @@ postNoticiaR = do
             alid <- runDB $ insert (Imagem $ imagemnome)
             now <- liftIO getCurrentTime
             noid <- runDB $ insert (Noticia titulo descricao now categoria alid)
+            Just jId <- lookupSession "_ID"
+            Just (Entity jid prophet) <- runDB $ selectFirst [JornalistaLoginId ==. (read . unpack $ jId)] []
+            _ <- runDB $ insert (Publicacao jid noid)
             defaultLayout [whamlet|
                 <p>Noticia cadastrada com sucesso!
             |]
