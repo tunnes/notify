@@ -394,3 +394,9 @@ body{
     padding-top: 15px;
     margin-bottom: 15px;
 }
+
+/* IMAGEM GLOBAL ------------------------------------------------------------------------------------------- */
+.image_filtro{
+    -webkit-filter: invert(.1) grayscale(1);
+    filter: invert(.1) grayscale(1);
+}
