@@ -64,6 +64,7 @@ Imagem
 
 mkYesodData "App" $(parseRoutesFile "routes")
 
+
 type Form a = Html -> MForm Handler (FormResult a, Widget)
 
 instance Yesod App where
@@ -88,6 +89,7 @@ instance Yesod App where
                     ^{pageBody pageContent}
         |]
         
+
     authRoute _                       = Just LoginR
     isAuthorized LoginR _             = return Authorized
     isAuthorized (AbrirNoticiaR _) _  = return Authorized

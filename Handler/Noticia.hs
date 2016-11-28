@@ -73,9 +73,7 @@ postNoticiaR = do
             Just jId <- lookupSession "_ID"
             Just (Entity jid prophet) <- runDB $ selectFirst [JornalistaLoginId ==. (read . unpack $ jId)] []
             _ <- runDB $ insert (Publicacao jid noid)
-            defaultLayout [whamlet|
-                <p>Noticia cadastrada com sucesso!
-            |]
+            redirect $ AbrirNoticiaR noid
         _ -> do
             defaultLayout [whamlet|
                 <p>Preencha os dados corretamente!
@@ -135,7 +133,7 @@ imageFilePath :: String -> FilePath
 imageFilePath f = uploadDirectory </> f
 
 diretorio :: FilePath
-diretorio = "https://gmoraizyesod-gmoraiz.c9users.io/static/img/"
+diretorio = "https://learn-yesod-tunnes.c9users.io/static/img/"
 
 uploadDirectory :: FilePath
 uploadDirectory = "Static/img"

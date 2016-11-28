@@ -9,7 +9,7 @@
                     <h1>
                         #{noticiaNome $ entityVal n1}   
                 <div class="col-md-5">
-                    <p>
+                    <p class="fix-bug">
                         #{noticiaDescricao $ entityVal n1}
                     
                 <div class="col-md-7">
@@ -42,6 +42,6 @@
                     <div class="col-md-12">
                         <h3>
                             #{noticiaNome $ entityVal nn}
-                        <p>#{noticiaDescricao $ entityVal nn}
+                        <p classs="fix-bug2">#{noticiaDescricao $ entityVal nn}
 
 ^{footer}

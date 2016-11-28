@@ -189,7 +189,7 @@ body{
     font-family: 'Roboto', sans-serif;
   font-weight: 300;
   width: 100%;
-  /*height: 350px;*/
+  height: 300px;
   white-space: normal;
   overflow: hidden;
   text-align: justify;
@@ -265,6 +265,10 @@ body{
     font-size: x-large;
 }
 #noticia_secundaria p{
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 400px;
     text-align: justify;
 }
 /* COISAS GENERICAS */
@@ -509,3 +513,38 @@ body{
 /*    width: 50%;*/
 /*    display: inline;*/
 /*}*/
+
+#logout button{
+    background-color: white;
+    border: none;
+    margin-top: 14px;
+    font-weight: 100;
+    font-size: 13px;
+}
+#logout button::hover{
+    color: red;
+}
+
+#jinfo2 span{
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+#jinfo span{
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.fix-bug{
+        white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 300px;
+    text-align: justify;
+}
+.fix-bug2{
+        white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 200px;
+    text-align: justify;
+}

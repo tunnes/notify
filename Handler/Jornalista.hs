@@ -76,9 +76,7 @@ postCadastroR = do
                  True -> do
                      lid <- runDB $ insert (Login login senha)
                      jorn <- runDB $ insert (Jornalista lid nome email nascimento)
-                     defaultLayout [whamlet|
-                        <p>Cadastrou-se com sucesso!
-                     |]
+                     redirect LoginR
                  False -> do
                       defaultLayout [whamlet|
                             <p>As senhas devem ser iguais
@@ -103,8 +101,8 @@ getLoginR = do
                             <form method=post action=@{LoginR} enctype=#{enctype}>
                                 ^{widget}
                                     <input class="login_submit" type="submit" value="Entrar">
-                                    <a class="fake_buttom"href="@{PrincipalR}">
-                                        <input class="login_submit" type="buttom" value="Página Principal">
+                                    <a class="fake_buttom" href=@{PrincipalR}>
+                                        <input class="login_submit" type="buttom" value="">
             |]
 
 -- Essa rota irá levar os dados de login até o servidor afim de efetuar a verificação
