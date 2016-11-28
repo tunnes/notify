@@ -432,6 +432,11 @@ body{
     border: 1px solid black;
     min-height: 500px;
 }
+/* IMAGEM GLOBAL ------------------------------------------------------------------------------------------- */
+.image_filtro{
+    -webkit-filter: invert(.1) grayscale(1);
+    filter: invert(.1) grayscale(1);
+}
 /* LOGIN ----------------------------------------------------------------------------------------------------- */
 .login_title h2{
     font-weight: 800;

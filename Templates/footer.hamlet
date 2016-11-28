@@ -3,23 +3,26 @@
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
             <div class="col-md-12">
                 <h3 class="nomes_titulo">Desenvolvido por
-            <div class="col-md-4">
+                
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                 <img class="img-responsive img_eutuenois" src=@{StaticR anubis_png}>
                 <h4 class="nomes" >Ayrton Felipe
-            <div class="col-md-4">
+            
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                 <img class="img-responsive img_eutuenois" src=@{StaticR thoth_png}>
                 <h4 class="nomes" >Gabriel MORAIS
             
-            <div class="col-md-4">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                 <img class="img-responsive img_eutuenois" src=@{StaticR horus_png}>
                 <h4 class="nomes" >Tarcísio Thallys     
+    
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">   
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
             <div class="col-md-12">
                 <h3 class="nomes_titulo">ORIENTADO POR
-            <div class="col-md-4">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                 <img class="img-responsive img_eutuenois" src=@{StaticR sobek_png}>
                 <h4 class="nomes" >PATRICK AUGUSTO
-            <div class="col-md-4">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                 <img class="img-responsive img_eutuenois" src=@{StaticR _Image_bastet_png}>
                 <h4 class="nomes" >ERIC OLIVEIRA
